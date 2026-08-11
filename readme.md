@@ -27,3 +27,9 @@ Contrainte:
  - Pas de retrait de somme négative
  - Pas de dépot de somme négative
  - Retrait ne doit amener à un solde négatif
+
+## Exercice 2
+
+1. Surcharger l’opérateur « + » de la classe « Courant » afin qu’il retourne la somme, de type double, des soldes. Cependant, les soldes négatifs ne doivent pas être pris en compte. 
+
+2. Ajouter une méthode « AvoirDesComptes » à la classe « Banque » recevant en paramètre le titulaire (Personne) qui calculera les avoirs de tous ses comptes en utilisant l’opérateur « + ».
