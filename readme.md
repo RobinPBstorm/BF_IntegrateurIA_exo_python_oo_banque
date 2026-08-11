@@ -30,7 +30,7 @@ Contrainte:
 
 ## Exercice 2
 
-1. Surcharger l’opérateur « + » de la classe « Courant » afin qu’il retourne la somme, de type double, des soldes. Cependant, les soldes négatifs ne doivent pas être pris en compte. 
+1. Surcharger l’opérateur « + » de la classe « Courant » afin qu’il retourne la somme, de type float, des soldes. Cependant, les soldes négatifs ne doivent pas être pris en compte. 
 
 2. Créer une classe « Banque ».
 
