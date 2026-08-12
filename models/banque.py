@@ -1,4 +1,6 @@
+from compte import Compte
 from compte_courant import Courant
+from compte_epargne import Epargne
 from personne import Personne
 
 class Banque:
@@ -6,8 +8,8 @@ class Banque:
         self.nom = nom
         self.comptes = comptes
 
-    def ajouter_compte(self, compte:Courant):
-        if not isinstance(compte,Courant):
+    def ajouter_compte(self, compte:Compte):
+        if not isinstance(compte,Compte):
             print("Ce n'est pas un compte valide qe vous tentez d'ajouter à la banque!")
             return
         
@@ -23,15 +25,15 @@ class Banque:
         total = 0
         for compte in self.comptes.values():
             if compte.titulaire == titulaire:
-                total = compte.solde + total
+                total = compte + total
         return total
 
     
 if __name__ == "__main__":
     titulaire1 = Personne("01", "Doe", "John")
-    compte1 = Courant("BE01", titulaire1, 100)
+    compte1 = Courant("BE01", titulaire1, 100, -50)
     compte2 = Courant("BE02", Personne("02", "Doe", "Jane"), 50)
-    compte3 = Courant("BE03", titulaire1, 250)
+    compte3 = Epargne("BE03", titulaire1, 250)
 
     banque = Banque("NeoBanque")
     try:

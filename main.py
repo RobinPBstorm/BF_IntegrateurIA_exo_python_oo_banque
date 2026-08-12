@@ -1,5 +1,5 @@
-from personne import Personne
-from compte_courant import Courant
+from models.personne import Personne
+from models.compte_courant import Courant
 
 john_doe = Personne(1, "Doe", "John")
 courant = Courant("BE01", john_doe, 100)
