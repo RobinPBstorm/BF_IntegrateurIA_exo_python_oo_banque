@@ -20,13 +20,24 @@ class Courant:
         else:
             self.solde += montant
 
+    # Courant(self) + other
+    def __add__(self, other):
+        if self.solde < 0:
+            return other
+        return self.solde + other
+
+    def __str__(self):
+        return f"Le compte courant {self.numero} possédé par {self.titulaire.prenom} avec {self.solde} €"
+        
+
 if __name__ == "__main__":
     john_doe = Personne(1, "Doe", "John")
     courant = Courant("BE01", john_doe, 100)
-    print(f"Le compte courant {courant.numero} possédé par {courant.titulaire.prenom} avec {courant.solde} €")
+    print(courant)
 
     courant.retrait(25)
-    print(f"Le compte courant {courant.numero} possédé par {courant.titulaire.prenom} avec {courant.solde} €")
-    
+    print(courant)
     courant.depot(50)
-    print(f"Le compte courant {courant.numero} possédé par {courant.titulaire.prenom} avec {courant.solde} €")
+    print(courant)
+    print(courant + 50)
+    print(courant)

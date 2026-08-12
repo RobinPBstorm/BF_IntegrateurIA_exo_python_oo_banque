@@ -35,7 +35,7 @@ Contrainte:
 2. Créer une classe « Banque ».
 
     Attributs:
-        - nom
-        - comptes: dict<numero, Courant>
+     - nom
+     - comptes: dict<numero, Courant>
 
 3. Ajouter une méthode « AvoirDesComptes » à la classe « Banque » recevant en paramètre le titulaire (Personne) qui calculera les avoirs de tous ses comptes en utilisant l’opérateur « + ».
