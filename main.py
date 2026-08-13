@@ -24,9 +24,11 @@ print(courant)
 
 epargne = Epargne("BE02", john_doe, 100)
 print(epargne)
+print(epargne.date_dernier_retait)
 
 try:
     epargne.retrait(150)
+    print(epargne.date_dernier_retait)
 except ValueError as error:
     print(error)
 except SoldeInsuffisantException as exception:
