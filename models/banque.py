@@ -1,7 +1,7 @@
-from compte import Compte
-from compte_courant import Courant
-from compte_epargne import Epargne
-from personne import Personne
+from models.compte import Compte
+from models.compte_courant import Courant
+from models.compte_epargne import Epargne
+from models.personne import Personne
 
 class Banque:
     def __init__(self, nom, comptes = None):

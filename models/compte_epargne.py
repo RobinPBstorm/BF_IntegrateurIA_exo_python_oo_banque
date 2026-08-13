@@ -1,5 +1,6 @@
-from compte import Compte
-from personne import Personne
+from models.compte import Compte
+from models.personne import Personne
+from models.solde_insuffisant_exception import SoldeInsuffisantException
 
 
 class Epargne(Compte):
@@ -8,9 +9,8 @@ class Epargne(Compte):
 
     def retrait(self, montant: float) -> None:
             if self.solde < montant:
-                print("Solde insuffisant")
-            else:
-                super().retrait(montant)
+                raise SoldeInsuffisantException(self.solde)
+            super().retrait(montant)
 
     def __str__(self):
         return f"Le compte épargne {self.numero} possédé par {self.titulaire.prenom} avec {self.solde} €"

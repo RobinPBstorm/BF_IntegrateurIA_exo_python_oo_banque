@@ -1,4 +1,4 @@
-from personne import Personne
+from models.personne import Personne
 
 class Compte:
     def __init__(self, numero: str, titulaire: Personne, solde: float = 0):
@@ -8,15 +8,13 @@ class Compte:
 
     def retrait(self, montant: float) -> None:
         if montant <= 0:
-            print("Montant invalide")
-        else:
-            self.solde -= montant
+            raise ValueError("Montant invalide pour un retrait")
+        self.solde -= montant
 
     def depot(self, montant: float) -> None:
             if montant <= 0:
-                print("Montant invalide")
-            else:
-                self.solde += montant
+                raise ValueError("Montant invalide pour un dépôt")
+            self.solde += montant
     
     
     def __add__(self, other):
