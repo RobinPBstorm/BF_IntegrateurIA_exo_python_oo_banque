@@ -72,3 +72,11 @@ Dans la classe « Compte » :
 
 Au niveau de la classe « Courant » : 
 1. Au niveau de la propriété « LigneDeCredit », déclenchez une exception de type « ValueError » si la valeur n’est pas supérieur ou égale à 0 (zéro).
+
+# Exercice 5
+
+1. Définir la classe « Compte » comme étant abstraite. 
+
+2. Ajouter une méthode à la classe « Compte » appelée « CalculInteret »  en sachant que pour un livret d’épargne le taux est toujours de 4.5% tandis que pour le compte courant si le solde est positif le taux sera de 3% sinon de 9.75%. 
+
+3. Ajouter une méthode à la classe « Compte » appelée «AppliquerInteret » qui additionnera le solde avec le retour de la méthode « CalculInteret ».
