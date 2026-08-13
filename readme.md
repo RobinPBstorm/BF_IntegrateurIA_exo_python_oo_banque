@@ -62,3 +62,13 @@ Contrainte:
 3. Créer une classe « Compte » avec tous les éléments communs à « Courant » et « Épargne »
 
 4. Si nous ajoutions la « ligne_de_credit » dans « Compte », définir sur papier les modifications qu’il faudrait apporter à nos classes.
+
+# Exercice 4
+
+Dans la classe « Compte » : 
+1. Au niveau de la méthode « Depot » et « Retrait », déclenchez une exception de type « ValueError » si le montant n’est pas supérieur à 0 (zéro). 
+
+2. Faites de même au niveau de la méthode « Retrait » et y ajouter le déclenchement d’une exception de type « SoldeInsuffisantException » si le montant ne peut être retiré. 
+
+Au niveau de la classe « Courant » : 
+1. Au niveau de la propriété « LigneDeCredit », déclenchez une exception de type « ValueError » si la valeur n’est pas supérieur ou égale à 0 (zéro).
