@@ -8,7 +8,7 @@ class Epargne(Compte):
 
     def retrait(self, montant: float) -> None:
             if self.solde < montant:
-                print("Solde insffisant")
+                print("Solde insuffisant")
             else:
                 super().retrait(montant)
 

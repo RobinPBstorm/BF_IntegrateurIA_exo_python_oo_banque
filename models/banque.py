@@ -4,13 +4,16 @@ from compte_epargne import Epargne
 from personne import Personne
 
 class Banque:
-    def __init__(self, nom, comptes = dict()):
+    def __init__(self, nom, comptes = None):
         self.nom = nom
+        
+        if comptes is None:
+            comptes = dict()
         self.comptes = comptes
 
     def ajouter_compte(self, compte:Compte):
         if not isinstance(compte,Compte):
-            print("Ce n'est pas un compte valide qe vous tentez d'ajouter à la banque!")
+            print("Ce n'est pas un compte valide que vous tentez d'ajouter à la banque!")
             return
         
         self.comptes[compte.numero] = compte
@@ -36,11 +39,12 @@ if __name__ == "__main__":
     compte3 = Epargne("BE03", titulaire1, 250)
 
     banque = Banque("NeoBanque")
+    banque2 = Banque("AutreBanque")
     try:
         banque.ajouter_compte("mon grand compte courant")
         banque.ajouter_compte(compte1)
-        banque.ajouter_compte(compte2)
-        banque.ajouter_compte(compte3)
+        banque2.ajouter_compte(compte2)
+        banque2.ajouter_compte(compte3)
     except Exception as exception:
         print(exception)
 
