@@ -9,14 +9,14 @@ class Epargne(Compte):
                  date_dernier_retait: datetime = None):
         super().__init__(numero, titulaire,solde)
         if date_dernier_retait is None:
-             date_dernier_retait = datetime.datetime.now
+             date_dernier_retait = datetime.datetime.now()
         self.date_dernier_retait = date_dernier_retait
 
     def retrait(self, montant: float) -> None:
             if self.solde < montant:
                 raise SoldeInsuffisantException(self.solde)
             super().retrait(montant)
-            self.date_dernier_retait = datetime.datetime.now
+            self.date_dernier_retait = datetime.datetime.now()
 
     def __str__(self):
         return f"Le compte épargne {self.numero} possédé par {self.titulaire.prenom} avec {self.solde} €"
